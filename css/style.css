@@ -5,3 +5,268 @@
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
+
+/* #region header */
+.header{
+    display:  flex;
+    justify-content:space-between;
+    padding: 0.125rem 2.5rem;
+}
+
+.logo{
+    display: flex;
+    gap: 1.25em;
+    align-items: center;
+}
+
+.logo--ico{
+    padding:0.438rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo--ico:first-child{
+    color: var(--color-secundary);
+    font-size: 2.625em;
+}
+
+.logo h1{
+    font-family: SF-Pro-Text-Bold;
+    color: var(--color-secundary);
+    text-transform: uppercase;
+    font-size: 1.875em;
+}
+
+.burger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;  
+}
+
+.burger i{
+   color: var(--color-secundary);
+   font-size: 1.42em;
+}
+/* #endregion header */
+
+/*#region home */
+
+/*#region banner */
+.title-banner{
+    padding: 3.75rem 2.5rem 2.5rem;
+}
+
+.title-banner h2{
+    color: var(--color-secundary);
+    text-transform: capitalize;
+    font-family: SF-Pro-Text-Bold;
+    font-size: 2.5em;
+}
+
+.banner{
+    display: grid;
+    box-shadow: 0px 0px 3.125em 0px rgba(51,64,79,15%);
+    border-radius: 2.5rem;
+    margin: 0 2.5em;
+    height: 17.5em;
+    gap: 1.875em;
+    grid-template-areas: 
+    "oink info info info";
+}
+
+.banner--oink{
+    grid-area: oink;
+}
+
+.banner--oink img{
+    border-radius: 2.5rem;
+    height: 17.5em;
+}
+
+.banner article{
+    grid-area: info;
+}
+
+.banner article > section{
+   grid-area: close;
+}
+
+.banner--close{
+    padding: 1.5em 1.5em 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner--close i{
+    color: var(--color-primary);
+    font-size: 2.5em;
+}
+
+.banner article h3{
+    color: var(--color-secundary);
+    font-size: 2.25em;
+    white-space: 0.625em;
+}
+
+.banner article p{
+    font-family: SF-Pro-Text-Regular;
+    font-size: 1.75em;
+    color: var(--color-secundary);
+    opacity: 50%;
+    padding-bottom: .7em;
+}
+
+.banner .banner--button{
+   font-family: SF-Pro-Text-Bold;
+   text-transform: uppercase;
+   color: white;
+   background-color: var(--color-primary);
+   border: 0;
+   padding: 1.125em 1.50em;
+   border-radius: 1.875em  ;
+}
+/*#endregion banner*/
+
+/*#region cards*/
+    .title-cards{
+        padding: 3.75rem 2.5rem 2.5rem;
+    }
+
+    .title-cards h2{
+        color: var(--color-secundary);
+        text-transform: capitalize;
+        font-family: SF-Pro-Text-Bold;
+        font-size: 2.5em;
+    }
+
+    [data-card]::before {
+        content: attr(data-card);
+        color: var(--color-primary);
+        font-family: "SF-Pro-Text-Bold";
+    }
+
+    .cards{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2.5em;
+        margin: 0 0 10em 2.5em;
+        overflow-x: auto;
+    }
+    .card{
+        background-color: var(--color-secundary);
+        min-width: 25em;
+        height: 38.875em;
+        border-radius: 2.5em;
+    }
+    
+    .card--texture{
+        padding: 2.5em;
+        background-image: url(../storage/img/card-texture.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "chip card-secret"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "card-balance card-balance"
+        "owner .";
+    }
+
+    .card--texture .icon-card-chip{
+        grid-area: chip;
+        font-size: 3.75em;
+    }
+    .card--texture p{
+        grid-area: card-secret;
+        font-size: 1.5em;
+        color: white;
+        font-family: "SF-Pro-Text-Semibold";
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    [data-card-secret]::before {
+        content: attr(data-card-secret);
+        color: white;
+        font-family: "SF-Pro-Text-Semibold";
+    }
+
+    .card--texture .card-balance{
+        font-family: "SF-Pro-Text-Bold";
+        grid-area: card-balance;
+        font-size: 2.25em;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    [data-card-balance]::before{
+        content: attr(data-card-balance);
+        color: white;
+        font-family: 3em;
+    }
+
+    .card--texture #owner{
+        grid-area: owner;
+        font-size: 3.75em;
+        color: white;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card:nth-child(2){
+        background-color: var(--color-secundary);
+        opacity: 40%;
+    }
+
+/*#endregion cards*/
+
+/*#endregion home*/
+
+ /* #region menu */
+.menu{
+    width: 100svw;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu ul{
+    height: 10svh;
+    list-style: none;
+    background: var(--color-secundary);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu ul li a i{
+    font-size: 3.081em;
+    color: white;
+}   
+/* #endregion menu */
+
+@media (width > 750px) {
+    html {
+       font-size: 16px;
+    }
+}
+
+@media (width < 750px) {
+    html {
+       font-size: 8.5px;
+    }
+}
