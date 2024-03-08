@@ -5,3 +5,169 @@
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
 }
+
+/* #region balance */
+.balance--container{
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem ;
+}
+
+.balance{
+    display: flex;
+    justify-content: center;
+    background-image: url(/storage/img/balance.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.balance--circle{
+    margin-top: 8.125rem;
+    max-width: 25rem;
+    max-height: 25rem;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance--info{
+    width: 13.438;
+    height: 11.688;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.balance--info h2{
+   color: white;
+   font-family: SF-Pro-Text-Bold;
+   font-size: 3em;
+   text-align: center;
+   text-transform: capitalize;
+}
+
+.balance--info p{
+    color: white;
+    font-family: SF-Pro-Text-Bold;
+    font-size: 3em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.balance--info p::first-letter{
+    color: white;
+    font-family: SF-Pro-Text-Bold;
+    font-size: 1.875rem;
+    text-align: center;
+    text-transform: capitalize;
+ }
+
+[balance-price]::before{
+    content: attr(balance-price);
+    font-family: SF-Pro-Text-Bold;
+}
+
+.graph{
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+.graph--buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 5.063rem ;
+}
+
+.graph--button{
+    border-radius: 3.75rem;
+    text-transform: capitalize;
+    padding: 1rem 2.5rem;
+}
+
+.graph--button:nth-child(1){
+    border: 0.2rem solid var(--color-secundary);
+    background-color: var(--color-secundary);
+    color: white;
+}
+
+.graph--button:nth-child(2){
+    border: 0.2rem solid var(--color-primary);
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.graph--button:nth-child(3){
+    border: 0.2rem solid var(--color-opaque);
+    background-color: white;
+    color: var(--color-opaque);
+}
+
+.graph--table img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0 5.063rem ;
+}
+
+.banner-balance{
+    background-color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-balance--container{
+    padding: 2rem 2.5rem;
+}
+
+.banner-balance--close{
+    display: flex;
+    justify-content: flex-end;
+}
+.banner-balance--close i{
+    font-size: 3.333rem;
+    color: var(--color-primary);
+}
+
+.banner-balance--content{
+    display: flex;
+    gap:3.063rem;
+}
+
+.banner-balance--info{
+    padding-top: 0.438rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
+.banner-balance--icon img{
+    width: 13rem;
+    object-fit: contain;
+}
+
+.banner-balance h2{
+    font-size: 2.5rem;
+    font-family: SF-Pro-Text-Bold;
+    text-transform: capitalize;
+}
+
+.banner-balance p{
+    font-size: 1.5rem;
+    opacity: 60%;
+    font-family: SF-Pro-Text-regular;
+}
+
+/* #endregion balance */
+
+@media (width < 750px){
+    html{
+        font-size: 9.5px;
+    }
+}
