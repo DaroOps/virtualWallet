@@ -2,14 +2,14 @@ import {} from "./modules/main.js"
 
 const myView = document.querySelector('main');
 
-const profileHTML = 'virtualWallet/views/profile.html'
-const balanceHTML = 'virtualWallet/views/balance.html'
-const homeHTML = 'virtualWallet/views/home.html'
+const profileHTML = '/views/profile.html'
+const balanceHTML = '/views/balance.html'
+const homeHTML = '/views/home.html'
 
 const balancePerformed = document.getElementById('balance');
 
 balancePerformed.addEventListener('click' , function(event){
-    event.preventDefault();
+   
     
     callView(balanceHTML)
 });
@@ -17,7 +17,7 @@ balancePerformed.addEventListener('click' , function(event){
 const homePerformed = document.getElementById('home');
 
 homePerformed.addEventListener('click' , function(event){
-    event.preventDefault();
+   
     
     callView(homeHTML)
 });
@@ -25,7 +25,7 @@ homePerformed.addEventListener('click' , function(event){
 const profilePerformed = document.getElementById('profile');
 
 profilePerformed.addEventListener('click' , function(event){
-    event.preventDefault();
+   
     
     callView(profileHTML)
 });
