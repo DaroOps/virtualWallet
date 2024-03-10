@@ -2,9 +2,9 @@ import {} from "./modules/main.js"
 
 const myView = document.querySelector('main');
 
-const profileHTML = '../views/profile.html'
-const balanceHTML = '../views/balance.html'
-const homeHTML = '../views/home.html'
+const profileHTML = 'views/profile.html'
+const balanceHTML = 'views/balance.html'
+const homeHTML = 'views/home.html'
 
 const balancePerformed = document.getElementById('balance');
 
