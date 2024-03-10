@@ -3,7 +3,7 @@ import {} from "./modules/main.js"
 const myView = document.querySelector('main');
 
 const profileHTML = 'views/profile.html'
-const balanceHTML = 'views/balance.html'
+const balanceHTML = 'https://daroops.github.io/virtualWallet/views/balance.html'
 const homeHTML = 'views/home.html'
 
 const balancePerformed = document.getElementById('balance');
@@ -35,7 +35,7 @@ function callView(link){
 
     let temp;
 
-    fetch('/virtualWallet/'+link)
+    fetch(link)
     .then(response => response.text())
     .then(html=>{
         
