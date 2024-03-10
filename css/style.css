@@ -8,9 +8,13 @@
 
 /* #region header */
 .header{
-    display:  flex;
-    justify-content:space-between;
-    padding: 0.125rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.875rem 2.5rem;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    background-color: var(--color-background);
 }
 
 .logo{
