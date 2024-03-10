@@ -35,7 +35,7 @@ function callView(link){
 
     let temp;
 
-    fetch(link)
+    fetch('/virtualWallet/'+link)
     .then(response => response.text())
     .then(html=>{
         
