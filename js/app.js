@@ -32,6 +32,9 @@ profilePerformed.addEventListener('click' , function(event){
 
 
 function callView(link){
+
+    let temp;
+
     fetch(link)
     .then(response => response.text())
     .then(html=>{
@@ -54,6 +57,8 @@ function callView(link){
             iconGroup.style.color = '#fff';
             logoTitle.style.color = '#fff';
             burgerIco.style.color = '#fff';
+
+            temp = document.getElementsByClassName('profile');
         }
         else if(link === balanceHTML){
             const header = document.getElementsByClassName('header')[0];
@@ -74,6 +79,7 @@ function callView(link){
             logoTitle.style.color = '#fff';
             burgerIco.style.color = '#fff';
             
+            temp = document.getElementsByClassName('balance--container');
         }
         else{
 
@@ -94,14 +100,12 @@ function callView(link){
             iconGroup.style.color = '#33404F';
             logoTitle.style.color = '#33404F';
             burgerIco.style.color = '#33404F';
-           
+            
+            temp = document.getElementsByClassName('home');
         }
 
-        const temp = document.getElementsByClassName('profile');
+       
         temp.innerHTML = html;
-        
-
-        console.log('Response ' + temp)
     
         myView.innerHTML = temp.innerHTML;
     })
